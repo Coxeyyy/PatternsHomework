@@ -1,13 +1,13 @@
-package com.coxey.app.exercise2.dto;
+package com.coxey.app.exercise2.essence;
 
-public class ClientDTO {
+public class Client {
     private String fullName;
     private int age;
     private String phoneNumber;
     private double incomePerMonth;
     private boolean creditHistory;
 
-    public ClientDTO(String fullName, int age, String phoneNumber, double incomePerMonth, boolean creditHistory) {
+    public Client(String fullName, int age, String phoneNumber, double incomePerMonth, boolean creditHistory) {
         this.fullName = fullName;
         this.age = age;
         this.phoneNumber = phoneNumber;

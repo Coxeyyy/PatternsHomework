@@ -1,12 +1,12 @@
-package com.coxey.app.exercise2.dto;
+package com.coxey.app.exercise2.essence;
 
-public class CreditDTO {
+public class Credit {
     private int creditAmount;
     private double interestRate;
     private int creditPeriod;
     private double monthlyPayment;
 
-    public CreditDTO(int creditAmount, double interestRate, int creditPeriod, double monthlyPayment) {
+    public Credit(int creditAmount, double interestRate, int creditPeriod, double monthlyPayment) {
         this.creditAmount = creditAmount;
         this.interestRate = interestRate;
         this.creditPeriod = creditPeriod;

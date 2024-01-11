@@ -1,11 +1,11 @@
 package com.coxey.app.exercise2.essence;
 
 public class Client {
-    private String fullName;
-    private int age;
-    private String phoneNumber;
-    private double incomePerMonth;
-    private boolean creditHistory;
+    private final String fullName;
+    private final int age;
+    private final String phoneNumber;
+    private final double incomePerMonth;
+    private final boolean creditHistory;
 
     public Client(String fullName, int age, String phoneNumber, double incomePerMonth, boolean creditHistory) {
         this.fullName = fullName;

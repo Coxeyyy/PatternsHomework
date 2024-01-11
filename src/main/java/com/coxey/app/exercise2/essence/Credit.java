@@ -1,10 +1,10 @@
 package com.coxey.app.exercise2.essence;
 
 public class Credit {
-    private int creditAmount;
-    private double interestRate;
-    private int creditPeriod;
-    private double monthlyPayment;
+    private final int creditAmount;
+    private final double interestRate;
+    private final int creditPeriod;
+    private final double monthlyPayment;
 
     public Credit(int creditAmount, double interestRate, int creditPeriod, double monthlyPayment) {
         this.creditAmount = creditAmount;

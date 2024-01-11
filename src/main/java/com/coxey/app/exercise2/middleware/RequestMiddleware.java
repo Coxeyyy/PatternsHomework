@@ -4,6 +4,9 @@ import com.coxey.app.exercise2.essence.Client;
 import com.coxey.app.exercise2.essence.Credit;
 
 public class RequestMiddleware extends Middleware {
+    /**
+     * Метод который делает проверку правильности подачи заявки
+     */
     @Override
     public boolean check(Client client, Credit credit) {
         if(client.getFullName() == null || client.getFullName().equals("") ||

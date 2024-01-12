@@ -1,5 +1,6 @@
 package com.coxey.app.exercise1;
 
+import com.coxey.app.exercise1.exception.CardTypeException;
 import com.coxey.app.exercise1.factory.CreatorCard;
 import com.coxey.app.exercise1.factory.CreatorCreditCard;
 import com.coxey.app.exercise1.factory.CreatorDebitCard;
@@ -21,7 +22,7 @@ public class Main {
                 creatorCard = new CreatorDebitCard();
                 break;
             default:
-                throw new RuntimeException("Карты такого типа не существует");
+                throw new CardTypeException("Карты такого типа не существует");
         }
         boolean flag = true;
         while(flag) {

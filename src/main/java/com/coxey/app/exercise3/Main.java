@@ -4,6 +4,7 @@ import com.coxey.app.exercise3.commands.Command;
 import com.coxey.app.exercise3.commands.NotificationEMail;
 import com.coxey.app.exercise3.commands.NotificationEmailSMS;
 import com.coxey.app.exercise3.commands.NotificationSMS;
+import com.coxey.app.exercise3.exception.NotificationException;
 import com.coxey.app.exercise3.invoker.NotificationControl;
 import com.coxey.app.exercise3.receiver.Notification;
 
@@ -37,7 +38,7 @@ public class Main {
                 notificationControl.sendNotification();
                 break;
             default:
-                throw new RuntimeException("Такого уведомления нет");
+                throw new NotificationException("Такого уведомления нет");
         }
     }
 }

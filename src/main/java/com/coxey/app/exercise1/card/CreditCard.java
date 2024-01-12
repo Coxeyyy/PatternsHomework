@@ -1,5 +1,7 @@
 package com.coxey.app.exercise1.card;
 
+import com.coxey.app.exercise1.exception.NotEnoughMoneyException;
+
 public class CreditCard implements Card {
     private double balance = 10_000;
 
@@ -20,7 +22,7 @@ public class CreditCard implements Card {
     @Override
     public void decreaseBalance(double value) {
         if(balance < value) {
-            throw new RuntimeException("Невозможно снять деньги, недостаточно средств");
+            throw new NotEnoughMoneyException("Невозможно снять деньги, недостаточно средств");
         }
         balance -= value;
     }

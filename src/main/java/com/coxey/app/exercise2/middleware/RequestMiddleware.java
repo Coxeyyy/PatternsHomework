@@ -9,16 +9,16 @@ public class RequestMiddleware extends Middleware {
      */
     @Override
     public boolean check(Client client, Credit credit) {
-        if(client.getFullName() == null || client.getFullName().equals("") ||
+        if(client.getFullName() == null || client.getFullName().isEmpty() ||
            client.getAge() < 18 || client.getPhoneNumber() == null ||
-           client.getIncomePerMonth() < 50_000 || client.isCreditHistory() != true) {
+           client.getIncomePerMonth() < 0 || !client.isCreditHistory()) {
             System.out.println("Ваши данные невалидны!");
             return false;
         }
         if(credit.getCreditAmount() < 500_000 || credit.getCreditAmount() > 1_000_000 ||
            credit.getInterestRate() < 15.0 || credit.getCreditPeriod() < 36 ||
            credit.getMonthlyPayment() < 25500) {
-            System.out.println("Ваша кредитный запрос отклонен");
+            System.out.println("Ваш кредитный запрос отклонен");
             return false;
         }
         return checkNext(client, credit);

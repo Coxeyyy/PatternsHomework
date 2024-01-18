@@ -24,7 +24,7 @@ public class Main {
         startDemo();
         boolean creditHistory = server.getClientCreditHistory("Petrov Ivan Sidorovich", 20, "89005001212", 220_000);
         Client client = new Client("Petrov Ivan Sidorovich", 20, "89005001212", 220_000, creditHistory);
-        Credit credit = new Credit(1_600_000, 20, 48, 26_000);
+        Credit credit = new Credit(600_000, 20, 48, 26_000);
         server.sendRequest(client, credit);
     }
 }

@@ -8,12 +8,7 @@ import com.coxey.app.exercise2.middleware.DecisionCreditMiddleware;
 import com.coxey.app.exercise2.middleware.Middleware;
 import com.coxey.app.exercise2.middleware.RequestMiddleware;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 public class Main {
-    private static final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     private static Server server;
 
     public static void startDemo() {
@@ -25,7 +20,7 @@ public class Main {
         );
         server.setMiddleware(middleware);
     }
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         startDemo();
         boolean creditHistory = server.getClientCreditHistory("Petrov Ivan Sidorovich", 20, "89005001212", 220_000);
         Client client = new Client("Petrov Ivan Sidorovich", 20, "89005001212", 220_000, creditHistory);
